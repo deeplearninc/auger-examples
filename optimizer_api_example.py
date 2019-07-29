@@ -60,7 +60,7 @@ class AugerAPI:
 	    return cls(**args)
 
 augerAPI = AugerAPI("https://app-staging.auger.ai")
-augerAPI.login(email="evgeny@auger.ai", password="bookes")
+augerAPI.login(email="email", password="password")
 
 search_space = {
     "pyspark.ml.classification.RandomForestClassifier": {
