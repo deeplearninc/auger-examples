@@ -21,7 +21,7 @@ class AugerAPI(object):
 	def create_trial_search(self, trials_total_count, search_space):
 		response = self.call_api(requests.post, "trial_searches", 
 			{'trials_total_count': trials_total_count, 'search_space': search_space,
-					'dataset_metafeatures':{'test': 1}})
+					'dataset_metafeatures':{}})
 		self.search_id = response.get('id')
 
 		status = response.get('status')
