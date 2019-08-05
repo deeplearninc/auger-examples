@@ -10,7 +10,10 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 spark = SparkSession.builder.appName("MLAugerSample").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
-augerAPI = AugerAPI("https://app-staging.auger.ai")
+# augerAPI = AugerAPI("https://app-staging.auger.ai")
+# augerAPI.login(email="evgeny@auger.ai", password="bookes")
+
+augerAPI = AugerAPI("https://app.auger.ai")
 augerAPI.login(email="email", password="password")
 
 search_space = {
